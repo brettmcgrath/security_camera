@@ -1,0 +1,10 @@
+images/
+.ipynb_checkpoints/
+yolov5/
+coco_albumentations.ipynb
+coco_api.ipynb
+engineering_with_albumentations.ipynb
+imgaug_try.ipynb
+reddit_api_pic_attempt.ipynb
+security_camera.ipynb
+Untitled.ipynb
