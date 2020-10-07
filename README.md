@@ -21,7 +21,7 @@ Through use of a convolutional neural network through YOLO v5, I intend to creat
 • Detection of long guns \
 • Distinguishing between drawn and holstered weapons \
 • Identifying police uniforms to rule out police posession of weapons \
-• Detecting fire \ 
+• Detecting fire  \ 
 • Detecting flood waters \
 • Detection of broken glass and forced entry \
  \
