@@ -95,7 +95,7 @@ Firmly believing that my data could be improved towards the pursuit of higher ac
 Model three was only slightly improved from my first model, and probably not worth the extra data and time spent on rethinking augmentation. Model 3 utilized my second dataset with YOLOv5s default architecture and SGD as an optimization algorithm for 500 epochs. Image size and batch size have been kept at 416 and 16 respectively in hopes of achieving higher accuracy at the expense of computational time. From my research, SGD, while it takes longer to converge, seemingly does a better job with these models. I chose to stick with SGD for the time being through research concerns and a high degree of oscilation in the tensorboard loss graph for my second model. Rather than gambling on learning rate adjustments to prevent convergence issues, SGD seemed to be a dependable choice, though again potentially at the expense of computational time.
 
 As seen below, there was minimal improvement over past modeling:
-<img src='./model1/results.png'>
+<img src='./model3/results.png'>
 
 ### Micro-model tests:
 I have designed several smaller subsets of data (1,680 images in training set and my original test set) on which to test sigmoid vs tanh activation. I would like to test the lower limit of how much data is actually needed to train these models at similar accuracy.
