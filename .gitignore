@@ -1,6 +1,6 @@
-images/
 .ipynb_checkpoints/
 yolov5/
+images/
 coco_albumentations.ipynb
 coco_api.ipynb
 engineering_with_albumentations.ipynb
