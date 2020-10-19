@@ -148,8 +148,7 @@ Having seen extremely promising results in model 3, I decided to revisit the dat
 
 ### Final models:
 
-I am convinced that there is merit to considering Tanh as an activation function instead of sigmoid. Trials using Tanh completed epochs faster than those using sigmoid activation, but experienced a delay of several hundred epochs to really kickstart into learning anything at all. Precision of these models is incredibly high, but mAP seems to only crawl slowly upwards. After 1783 epochs of Tanh trials, I decided that sigmoid has yielded more dependable results. Lacking time until the project deadline, and already having spent a fair amount of money on Azure, I opted to use a sigmoid activation for my final model. 
-
+I am convinced that there is merit to considering Tanh as an activation function over sigmoid, but will need to postpone further testing until future experiments. Trials using Tanh completed epochs faster than those using sigmoid activation, but experienced a delay of several hundred epochs to really kickstart into learning anything at all. Precision of these models is incredibly high, but mAP seems to only crawl slowly upwards. After 1783 epochs of Tanh trials, I decided that sigmoid has yielded more dependable results. Lacking time until the project deadline, and already having spent a fair amount of money on Azure, I opted to use a sigmoid activation for my final model. 
 
 
 ## Reflections_on_the_modeling_process
