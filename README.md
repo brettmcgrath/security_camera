@@ -134,16 +134,7 @@ As seen below, there was minimal improvement over past modeling:
 <img src='./results/2_model3_1class/results.png'>
 
 ### Micro-model tests:
-I ran several smaller datasets of handgun images (1,680 images in training set and my original test set) on which to test sigmoid vs tanh activation and adam optimization against the YOLOv5 default settings.
-
-<b>Default setting micro test</b>
-<img src='./results/3_micro_test_results_1class/default_micro/results.png'><br>
-<b>Adam optimization micro test</b>
-<img src='./results/3_micro_test_results_1class/adam_micro/results.png'><br>
-<b>Tanh activation micro test</b>
-<img src='./results/3_micro_test_results_1class/tanh_micro/results.png'><br>
-
-As seen in the above results charts, use of the adam optimizer performed worse by nearly all metrics than use of the default (SGD). Tanh showed promise for continued use in providing nearly equivalent results as sigmoid activation with slightly higher precision and was able to train in over half the time. 
+I ran several smaller datasets of handgun images (1,680 images in training set and my original test set) on which to test sigmoid vs tanh activation and adam optimization against the YOLOv5 default settings. Use of the adam optimizer performed worse by nearly all metrics than use of the default (SGD). Tanh showed promise for continued use in providing nearly equivalent results as sigmoid activation with slightly higher precision and was able to train in over half the time. The much smaller data size affected all metrics significantly. See results for micro-test results for exact numbers and their respective graphs.
 
 ### Introduction of other classes for final modeling:
 
