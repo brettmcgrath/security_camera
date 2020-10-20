@@ -86,7 +86,7 @@ ToGray - 20%
 
 ### Subsequent datasets
 
-With the introduction of dividing handguns and holstered handguns into seperate classes, several data considerations were taken in hopes of optimizing predictive power in the face of similar looking objects with an imbalance in image quantity. I started with 961 images of handguns and a combined 2,661 images of semi-automatic handguns and revolvers. For initial modeling, handguns were further divided into revolver and semi-auto classes, but this was changed in the final models to just two classes: handguns and holstered handguns. To adjust for class imbalance, roughly half of the 292 testing sample were selected from each class, and each class image set was augmented to around 5,000 images from each class before being added to the training set and renamed at random to shuffle categories. 
+With the introduction of dividing handguns and holstered handguns into seperate classes, several data considerations were taken in hopes of optimizing predictive power in the face of similar looking objects with an imbalance in image quantity. I started with 961 images of holsters and a combined 2,661 images of semi-automatic handguns and revolvers. For initial modeling, handguns were further divided into revolver and semi-auto classes, but this was changed in the final models to just two classes: handguns and holstered handguns. To adjust for class imbalance, roughly half of the 292 testing sample were selected from each class, and each class image set was augmented to around 5,000 images from each class before being added to the training set and renamed at random to shuffle categories. 
 
 The final augmentation pipeline for handguns is as follows:
 
