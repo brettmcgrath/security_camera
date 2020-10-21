@@ -5,6 +5,7 @@
 - [Data Manipultation and Analysis](#Data_Manipulation_and_Analysis)  
 - [Preprocessing and Modeling](#Preprocessing_and_Modeling)  
 - [Reflections on the modeling process](#Reflections_on_the_modeling_process)  
+- [Conclusions and Recommendations](#Conclusions_and_Recommendations)  
 
 ## Project Contents:
 
@@ -14,7 +15,7 @@ The attached file contains the following files:
 Attached directories:
 1. **data_tools** - Tools I developed or adapted from others for use in manipulating image data
 2. **results** - Results of model performance, performance snapshots with bounding boxes, graphs of metrics. comparison.csv can be read as a table of pertinent information of all models and micro-tests (see below) conducted. Detailed information of the data size, epochs trained, and resulting model metrics can be found within this csv file.
-3. **detection** - This directory contains two files that are an option tool for experimenting with live video. Place these two files in your yolov5 directory, cd into the directory and type "python --detect2.py --view-img" to try webcam detection on your personal computer. Every time the detection file finds a handgun it will play a sound. Works instantly on live video. The detect2 code is refactored from the original detect.py provided in Ultralytics yolov5 repository.
+3. **detection** - This directory contains two files that are an optional tool for experimenting with live video. Place these two files in your yolov5 directory, cd into the directory and type "python --detect2.py --view-img" to try webcam detection on your personal computer. Every time the detection file finds a handgun it will play a sound. Works instantly on live video. The detect2 code is refactored from the original detect.py provided in Ultralytics yolov5 repository.
 4. **eda_and_img_aug** - Directory of notebooks used in image preparation and augmentation.
 
 ## Data
@@ -98,14 +99,14 @@ RGBShift - 20% \
 Rotate - 360 degrees in either direction - 10% \
 Rotate - 50 degrees in either direction - 40% \
 Rotate - 20 degrees in either direction - 80% \
-ToGray - 20% \
+ToGray - 20% 
 
 For holsters, all augmentations were kept except for the following changes. Vertical flip was removed entirely and rotation degrees were adjusted because holsters are far less likely to be upside down than a firearms itself.
 
 HorizontalFlip - 50% \
 Rotate - 90 degrees in either direction - 10% \
 Rotate - 25 degrees in either direction - 20% \
-Rotate - 15 degrees in either direction - 90% \
+Rotate - 15 degrees in either direction - 90% 
 
 
 ## Preprocessing_and_Modeling
