@@ -17,6 +17,7 @@ The attached file contains the following files:
 Attached directories:
 1. **data_tools** - Tools I developed or adapted from others for use in manipulating image data
 2. **results** - Results of model performance, performance snapshots with bounding boxes, graphs of metrics. comparison.csv can be read as a table of pertinent information of all models and micro-tests (see below) conducted. Detailed information of the data size, epochs trained, and resulting model metrics can be found within this csv file.
+3. **detection** - This directory contains two files that are an option tool for experimenting with live video. Place these two files in your yolov5 directory, cd into the directory and type "python --detect2.py --view-img" to try webcam detection on your personal computer. Every time the detection file finds a handgun it will play a sound. Works instantly on live video. The detect2 code is refactored from the original detect.py provided in Ultralytics yolov5 repository.
 
 ## Data
 
