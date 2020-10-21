@@ -10,7 +10,7 @@
 
 The attached file contains the following files:
 1. **original_eda_and_img_aug.ipynb** - This file contains the original exploratory data analysis and image augmentation of my security camera project. The first part of this notebook details image size, number of images, train/test split amounts, and information regarding data that was removed from the original image dataset. Images were augmented to increase size of training data.
-2. **second_ed_and_img_aug.ipynb** - This file contains the adjustments made for the creation of my second dataset which was used on model 3.
+2. **second_ed_and_img_aug.ipynb** - This file contains the adjustments made for the creation of my second dataset which was used on model
 3.**FINAL_data_aug.ipynb** - Contains adjustments made to image augmentation pipeline for the creation of my final dataset used in the final model.
 4. **security_camera.ipynb** - The code used to run my final model
 
