@@ -16,12 +16,11 @@ The attached file contains the following files:
 
 Attached directories:
 1. **data_tools** - Tools I developed or adapted from others for use in manipulating image data
-2. **results** - Results of model performance, performance snapshots with bounding boxes, graphs of metrics
-3. **yolov5** - The original yolov5 directory forked from Ultralytics GitHub
+2. **results** - Results of model performance, performance snapshots with bounding boxes, graphs of metrics. comparison.csv can be read as a table of pertinent information of all models and micro-tests (see below) conducted. Detailed information of the data size, epochs trained, and resulting model metrics can be found within this csv file.
 
 ## Data
 
-Data used in this project can be seen on a University of Grenada handgun image dataset listed on [Kaggle](https://www.kaggle.com/andrewmvd/handgun-detection). Annotations from this dataset were converted from COCO ([x_min, y_min, width, height]) to YOLO (normalized[x_center, y_center, width, height]) format for future use of modeling with the [YOLO v5 model](https://github.com/ultralytics/yolov5) architecture.
+Data used in this project can be seen on a University of Grenada handgun image dataset listed [here](https://sci2s.ugr.es/weapons-detection#RP). Annotations from this dataset were converted from COCO ([x_min, y_min, width, height]) to YOLO (normalized[x_center, y_center, width, height]) format for future use of modeling with the [YOLO v5 model](https://github.com/ultralytics/yolov5) architecture.
 
 ## Data_Problem
 
@@ -147,8 +146,15 @@ I am convinced that there is merit to considering Tanh as an activation function
 
 ## Reflections_on_the_modeling_process
 
-TBD
+My best performing model by far was model 3. Model three saw unmatched precision and recall. At the default inference rate of displaying bounding boxes for everything with 0.5 confidence and higher, it performed very well at keeping a bounding box on handguns in video, and had minimal, though noticeable false positives on heads, neckties, chairs, and other items. Many of these items were being flagged at up to 0.79 confidence level. When I changed the detect.py file to display all objects the model reasoned above 79% confidence, model precision improved and the model still was able to flag guns, though with less likelihood there was a constant bounding box around them in every frame.
+
+As a first dive into computer vision, I have learned a considerable amount of information from my models, and I believe that the information gained is a strength towards future modeling endeavors. While data size has a great affect on model performance, I could be better served in the future training with less data and potentially a higher learning rate. Training, especially on my final model which ran for 2000 epochs, was painfully slow even on an Azure GPU optimized machine. My final model took over 30 hours to train. I believe that with further training the final model could viably predict the difference between holstered and non-holstered weapons, but I do not believe that this is the best course of action moving forward. 
+
 
 ## Conclusions_and_Recommendations
 
-TBD
+The final model seemed to have a hard time distinguishing between holstered and non-holstered weapons. The division of handguns into two separate classes in a previous model (semi-automatic handguns and revolvers) seemed benefitial to machine learning endeavors by giving the computer more similar looking items to consider a class. Given the very obvious stylistic differences not only between semi-automatic handguns and revolvers but also the holsters that carry them, I will be dividing these into four categories for future modeling. This should cut down on modeling time and hopefully provide more precise results.
+
+One limitation I forsee in future modeling is YOLO's inability to detect small objects (flocks of birds is seen as an example in literature review). This may have been the case with my examination of robbery footage in which a prominent though small firearm was held on a counter, undetected by my model. To accurately address the task of creating a model that can detect the presence of firearms, a multi-prong approach may be considered in which YOLO is used in tandem with a Faster R-CNN or SSD. If this is the case, the YOLO model could feature on specific features of a firearm such as the grip, trigger and barrel/front sight which could be used in discerning a difference between drawn and holstered weapons. The other model would then focus on the general shape of smaller firearms, hopefully allowing for a best of both worlds scenario in which firearms are detected at all shapes and sizes, and with as much speed as possible.
+
+My model is available for deployment to live video systems, but is by no means my final product in the continuation of this project.
