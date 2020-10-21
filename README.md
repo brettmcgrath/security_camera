@@ -9,15 +9,13 @@
 ## Project Contents:
 
 The attached file contains the following files:
-1. **original_eda_and_img_aug.ipynb** - This file contains the original exploratory data analysis and image augmentation of my security camera project. The first part of this notebook details image size, number of images, train/test split amounts, and information regarding data that was removed from the original image dataset. Images were augmented to increase size of training data.
-2. **second_ed_and_img_aug.ipynb** - This file contains the adjustments made for the creation of my second dataset which was used on model
-3.**FINAL_data_aug.ipynb** - Contains adjustments made to image augmentation pipeline for the creation of my final dataset used in the final model.
-4. **security_camera.ipynb** - The code used to run my final model
+1. **custom_model_code.ipynb** - Code adapted from the Ultralytics GitHub repository for use in running a custom dataset on YOLOv5.
 
 Attached directories:
 1. **data_tools** - Tools I developed or adapted from others for use in manipulating image data
 2. **results** - Results of model performance, performance snapshots with bounding boxes, graphs of metrics. comparison.csv can be read as a table of pertinent information of all models and micro-tests (see below) conducted. Detailed information of the data size, epochs trained, and resulting model metrics can be found within this csv file.
 3. **detection** - This directory contains two files that are an option tool for experimenting with live video. Place these two files in your yolov5 directory, cd into the directory and type "python --detect2.py --view-img" to try webcam detection on your personal computer. Every time the detection file finds a handgun it will play a sound. Works instantly on live video. The detect2 code is refactored from the original detect.py provided in Ultralytics yolov5 repository.
+4. **eda_and_img_aug** - Directory of notebooks used in image preparation and augmentation.
 
 ## Data
 
