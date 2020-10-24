@@ -18,9 +18,12 @@ Attached directories:
 3. **detection** - This directory contains two files that are an optional tool for experimenting with live video. Place these two files in your yolov5 directory, cd into the directory and type "python --detect2.py --view-img" to try webcam detection on your personal computer. Every time the detection file finds a handgun it will play a sound. Works instantly on live video. The detect2 code is refactored from the original detect.py provided in Ultralytics yolov5 repository.
 4. **eda_and_img_aug** - Directory of notebooks used in image preparation and augmentation.
 
+The specific, refactored yolov5 code I used for model 3 can be downloaded by [clicking here](https://drive.google.com/file/d/1vmJA_VoI_g1bRTXaHYP89PNTn60y4PkN/view?usp=sharing). The original yolov5 code from Ultralytics can be cloned or forked from the [Ultralytics Github](https://github.com/ultralytics/yolov5) or from my fork of the repo on this account.
+
+
 ## Data
 
-Data used in this project can be seen on a University of Grenada handgun image dataset listed [here](https://sci2s.ugr.es/weapons-detection#RP). Annotations from this dataset were converted from COCO ([x_min, y_min, width, height]) to YOLO (normalized[x_center, y_center, width, height]) format for future use of modeling with the [YOLO v5 model](https://github.com/ultralytics/yolov5) architecture.
+Most of the data used in this project can be seen on a University of Grenada handgun image dataset listed [here](https://sci2s.ugr.es/weapons-detection#RP). Annotations from this dataset were converted from COCO ([x_min, y_min, width, height]) to YOLO (normalized[x_center, y_center, width, height]) format for future use of modeling with the [YOLO v5 model](https://github.com/ultralytics/yolov5) architecture.
 
 ## Data_Problem
 
@@ -131,6 +134,8 @@ Results in action: \
 
 As seen below, there was minimal improvement over past modeling:
 <img src='./results/2_model3_1class/results.png'>
+
+If you are interested in reproducing these results, feel free to download the data used with augmentations by clicking [here](https://drive.google.com/file/d/1fTSPG7bh9j26EQsJo-7cGYQtofd_UPsm/view?usp=sharing) then embedding the cleaned_data folder within the yolov5 folder refactored for model 3 available for download [here](https://drive.google.com/file/d/1vmJA_VoI_g1bRTXaHYP89PNTn60y4PkN/view?usp=sharing).
 
 ### Micro-model tests:
 I ran several smaller datasets of handgun images (1,680 images in training set and my original test set) on which to test sigmoid vs tanh activation and adam optimization against the YOLOv5 default settings. Use of the adam optimizer performed worse by nearly all metrics than use of the default (SGD). Tanh showed promise for continued use in providing nearly equivalent results as sigmoid activation with slightly higher precision and was able to train in over half the time. The much smaller data size affected all metrics significantly. See results for micro-test results for exact numbers and their respective graphs.
